@@ -33,8 +33,8 @@ public class DoublyLinkedList <E>{
 		lastNode = last;
 	}
 	
-	public void ForwardsTraverse(DoublyLinkedList<E> list){
-		DoublyLinkedNode<E> node = list.firstNode;
+	public void ForwardsTraverse(){
+		DoublyLinkedNode<E> node = firstNode;
 		System.out.print("Forwards: ");
 		
 		while(node != null){
@@ -43,8 +43,8 @@ public class DoublyLinkedList <E>{
 		}
 	}
 	
-	public void BackwardsTraverse(DoublyLinkedList<E> list){
-		DoublyLinkedNode<E> node = list.lastNode;
+	public void BackwardsTraverse(){
+		DoublyLinkedNode<E> node = lastNode;
 		System.out.print("Backwards: ");
 		
 		while(node != null){
@@ -52,6 +52,21 @@ public class DoublyLinkedList <E>{
 			node = node.prev;
 		}
 	}
+	
+	public void InsertAfter (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){
+		newNode.prev = node;
+		newNode.next = node.next;
+		
+		if(node.next == null){
+			lastNode = newNode;
+		}else{
+			node.next.prev = newNode;
+		}
+		
+		node.next = newNode;
+	}
+	
+	
 	
 	
 }
