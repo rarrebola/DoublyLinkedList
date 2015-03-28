@@ -24,8 +24,10 @@ public class DoublyLinkedList <E>{
 	DoublyLinkedNode<E> lastNode;
 	
 	public DoublyLinkedList (DoublyLinkedNode<E> node){
+		node.prev = null;
+		node.next = null;
 		firstNode = node;
-		lastNode = null;
+		lastNode = node;
 	}
 	
 	public DoublyLinkedList (DoublyLinkedNode<E> first, DoublyLinkedNode<E> last){
@@ -66,7 +68,27 @@ public class DoublyLinkedList <E>{
 		node.next = newNode;
 	}
 	
+	public void InsertBefore (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){
+		newNode.next = node;
+		newNode.prev = node.prev;
+		
+		if(node.prev == null){
+			firstNode = newNode;
+		}else{
+			node.prev.next = newNode;
+		}
+		
+		node.prev = newNode;
+	}
 	
-	
-	
+	public void InsertBeginning (DoublyLinkedNode<E> newNode){
+		if(firstNode == null){
+			newNode.next = null;
+			newNode.prev = null;
+			firstNode = newNode;
+			lastNode = newNode;
+		}else{
+			InsertBefore(firstNode, newNode);
+		}
+	}
 }
