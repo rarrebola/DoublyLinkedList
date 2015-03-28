@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+C:\Users\Rocío\DoublyLinkedList\.metadata\.plugins\org.eclipse.jdt.core
+2616073149.index
