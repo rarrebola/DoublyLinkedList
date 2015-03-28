@@ -37,7 +37,7 @@ public class DoublyLinkedList <E>{
 		DoublyLinkedNode<E> node = list.firstNode;
 		System.out.print("Forwards: ");
 		
-		while(node.next != null){
+		while(node != null){
 			System.out.print(node.data + " ");
 			node = node.next;
 		}
@@ -47,8 +47,9 @@ public class DoublyLinkedList <E>{
 		DoublyLinkedNode<E> node = list.lastNode;
 		System.out.print("Backwards: ");
 		
-		while(node.prev != null){
+		while(node != null){
 			System.out.println(node.data + " ");
+			node = node.prev;
 		}
 	}
 	
