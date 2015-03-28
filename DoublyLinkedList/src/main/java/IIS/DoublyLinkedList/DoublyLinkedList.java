@@ -33,5 +33,24 @@ public class DoublyLinkedList <E>{
 		lastNode = last;
 	}
 	
+	public void ForwardsTraverse(DoublyLinkedList<E> list){
+		DoublyLinkedNode<E> node = list.firstNode;
+		System.out.print("Forwards: ");
+		
+		while(node.next != null){
+			System.out.print(node.data + " ");
+			node = node.next;
+		}
+	}
+	
+	public void BackwardsTraverse(DoublyLinkedList<E> list){
+		DoublyLinkedNode<E> node = list.lastNode;
+		System.out.print("Backwards: ");
+		
+		while(node.prev != null){
+			System.out.println(node.data + " ");
+		}
+	}
+	
 	
 }
