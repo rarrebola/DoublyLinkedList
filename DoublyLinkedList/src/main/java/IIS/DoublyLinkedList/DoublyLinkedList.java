@@ -91,4 +91,28 @@ public class DoublyLinkedList <E>{
 			InsertBefore(firstNode, newNode);
 		}
 	}
+	
+	public void InsertEnd (DoublyLinkedNode<E> newNode){
+		if(lastNode == null){
+			InsertBeginning(newNode);
+		}else{
+			InsertAfter(lastNode, newNode);
+		}
+	}
+	
+	public void remove (DoublyLinkedNode<E> node){
+		DoublyLinkedNode<E> n = firstNode;
+		boolean node_is_in_the_list = false;
+		
+		while(n != null && !node_is_in_the_list){
+			if(n == node){
+				node_is_in_the_list = true;
+				break;
+			}
+			n = n.next;
+		}
+		
+		//Complete here
+		
+	}
 }

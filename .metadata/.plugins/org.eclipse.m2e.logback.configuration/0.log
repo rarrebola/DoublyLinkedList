@@ -61,3 +61,7 @@
 2015-03-28 23:20:43,336 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rocío\DoublyLinkedList\DoublyLinkedList\src\main\resources
 2015-03-28 23:20:43,336 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-03-28 23:20:43,336 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rocío\DoublyLinkedList\DoublyLinkedList\src\test\resources
+2015-03-28 23:38:19,316 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-03-28 23:38:19,316 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rocío\DoublyLinkedList\DoublyLinkedList\src\main\resources
+2015-03-28 23:38:19,316 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-03-28 23:38:19,316 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rocío\DoublyLinkedList\DoublyLinkedList\src\test\resources
