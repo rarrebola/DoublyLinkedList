@@ -1,0 +1,7 @@
+package IIS.DoublyLinkedList;
+
+public class DoublyLinkedList <E>{
+	public class DoublyLinkedNode<T>{
+		
+	}
+}

@@ -104,6 +104,7 @@ public class DoublyLinkedList <E>{
 		DoublyLinkedNode<E> n = firstNode;
 		boolean node_is_in_the_list = false;
 		
+		//loop to check if the node is in the list
 		while(n != null && !node_is_in_the_list){
 			if(n == node){
 				node_is_in_the_list = true;
@@ -112,7 +113,21 @@ public class DoublyLinkedList <E>{
 			n = n.next;
 		}
 		
-		//Complete here
+		if(!node_is_in_the_list){
+			throw new RuntimeException("ERROR: The node is not in the list.");
+		}else{
+			if (node.prev == null){
+				firstNode = node.next;
+			}else{
+				node.prev.next = node.next;
+			}
+			
+			if(node.next == null){
+				lastNode = node.prev;
+			}else{
+				node.next.prev = node.prev;
+			}
+		}
 		
 	}
 }
