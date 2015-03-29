@@ -10,7 +10,6 @@ public class App
     	
     	DoublyLinkedList<Integer> list = new DoublyLinkedList<Integer>(n1, n2);
     	
-    	System.out.println("\nFirst traverse: \n");
     	list.ForwardsTraverse();
     	list.BackwardsTraverse();
     	
@@ -26,11 +25,6 @@ public class App
     	DoublyLinkedNode<Integer> new_node_4 = new DoublyLinkedNode<Integer>(9);
     	list.InsertEnd(new_node_4);
     	
-    	System.out.println("\n Second traverse: \n");
-    	list.BackwardsTraverse();
-    	list.ForwardsTraverse();
-    	
-    	System.out.println("\n Last traverse: \n");
     	list.remove(new_node_2);
     	
     	list.BackwardsTraverse();

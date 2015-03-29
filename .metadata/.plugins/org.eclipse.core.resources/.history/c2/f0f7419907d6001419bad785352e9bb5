@@ -2,6 +2,24 @@ package IIS.DoublyLinkedList;
 
 public class DoublyLinkedList <E>{
 	
+	public class DoublyLinkedNode<T>{
+		DoublyLinkedNode<T> prev;
+		DoublyLinkedNode<T> next;
+		T data;
+		
+		public DoublyLinkedNode (T data){
+			prev = null;
+			next = null;
+			this.data = data;
+		}
+		
+		public DoublyLinkedNode (DoublyLinkedNode<T> prev, DoublyLinkedNode<T> next, T data){
+			this.prev = prev;
+			this.next = next;
+			this.data = data;
+		}
+	}
+	
 	DoublyLinkedNode<E> firstNode;
 	DoublyLinkedNode<E> lastNode;
 	
@@ -14,11 +32,7 @@ public class DoublyLinkedList <E>{
 	
 	public DoublyLinkedList (DoublyLinkedNode<E> first, DoublyLinkedNode<E> last){
 		firstNode = first;
-		firstNode.next = last;
-		firstNode.prev = null;
 		lastNode = last;
-		lastNode.prev = first;
-		lastNode.next = null;
 	}
 	
 	public void ForwardsTraverse(){
@@ -29,8 +43,6 @@ public class DoublyLinkedList <E>{
 			System.out.print(node.data + " ");
 			node = node.next;
 		}
-		
-		System.out.println("\n");
 	}
 	
 	public void BackwardsTraverse(){
@@ -38,11 +50,9 @@ public class DoublyLinkedList <E>{
 		System.out.print("Backwards: ");
 		
 		while(node != null){
-			System.out.print(node.data + " ");
+			System.out.println(node.data + " ");
 			node = node.prev;
 		}
-		
-		System.out.print("\n");
 	}
 	
 	public void InsertAfter (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){

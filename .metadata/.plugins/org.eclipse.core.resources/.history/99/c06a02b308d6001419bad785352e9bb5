@@ -29,8 +29,6 @@ public class DoublyLinkedList <E>{
 			System.out.print(node.data + " ");
 			node = node.next;
 		}
-		
-		System.out.println("\n");
 	}
 	
 	public void BackwardsTraverse(){
@@ -38,11 +36,9 @@ public class DoublyLinkedList <E>{
 		System.out.print("Backwards: ");
 		
 		while(node != null){
-			System.out.print(node.data + " ");
+			System.out.println(node.data + " ");
 			node = node.prev;
 		}
-		
-		System.out.print("\n");
 	}
 	
 	public void InsertAfter (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){

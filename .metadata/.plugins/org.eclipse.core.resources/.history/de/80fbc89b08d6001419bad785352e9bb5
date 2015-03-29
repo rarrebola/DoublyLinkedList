@@ -1,0 +1,33 @@
+package IIS.DoublyLinkedList;
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	DoublyLinkedNode<Integer> n1 = new DoublyLinkedNode(3);
+    	DoublyLinkedNode<Integer> n2 = new DoublyLinkedNode(4);
+    	
+    	DoublyLinkedList<Integer> list = new DoublyLinkedList(n1, n2);
+    	
+    	list.ForwardsTraverse();
+    	list.BackwardsTraverse();
+    	
+    	DoublyLinkedNode<Integer> new_node_1 = new DoublyLinkedNode(5);
+    	list.InsertAfter(n2, new_node_1);
+    	
+    	DoublyLinkedNode<Integer> new_node_2 = new DoublyLinkedNode(6);
+    	list.InsertAfter(new_node_1, new_node_2);
+    	
+    	DoublyLinkedNode<Integer> new_node_3 = new DoublyLinkedNode(14);
+    	list.InsertBeginning(new_node_3);
+    	
+    	DoublyLinkedNode<Integer> new_node_4 = new DoublyLinkedNode(9);
+    	list.InsertEnd(new_node_4);
+    	
+    	list.remove(new_node_2);
+    	
+    	list.BackwardsTraverse();
+    	list.ForwardsTraverse();
+    }
+}
