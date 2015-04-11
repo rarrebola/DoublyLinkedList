@@ -1,0 +1,43 @@
+package iis.doublyLinkedList;
+
+
+public class App {
+	public static final int v1 =3;
+	public static final int v2 = 4;
+	public static final int v3 = 14;
+	public static final int v4 = 9;
+	public static final int v5 = 13;
+	public static final int v6 = 6;
+    public static void main( String[] args ){
+    	DoublyLinkedNode<Integer> n1 = new DoublyLinkedNode<Integer>(v1);
+    	DoublyLinkedNode<Integer> n2 = new DoublyLinkedNode<Integer>(v2);
+    	
+    	DoublyLinkedList<Integer> list = new DoublyLinkedList<Integer>(n1, n2);
+    	
+    	System.out.println("\nFirst traverse: \n");
+    	list.ForwardsTraverse();
+    	list.BackwardsTraverse();
+    	
+    	DoublyLinkedNode<Integer> newNode1 = new DoublyLinkedNode<Integer>(v3);
+    	list.InsertAfter(n2, newNode1);
+    	
+    	DoublyLinkedNode<Integer> newNode2 = new DoublyLinkedNode<Integer>(v4);
+    	list.InsertAfter(newNode1, newNode2);
+    	
+    	DoublyLinkedNode<Integer> newNode3 = new DoublyLinkedNode<Integer>(v5);
+    	list.InsertBeginning(newNode3);
+    	
+    	DoublyLinkedNode<Integer> newNode4 = new DoublyLinkedNode<Integer>(v6);
+    	list.InsertEnd(newNode4);
+    	
+    	System.out.println("\n Second traverse: \n");
+    	list.BackwardsTraverse();
+    	list.ForwardsTraverse();
+    	
+    	System.out.println("\n Last traverse: \n");
+    	list.remove(newNode2);
+    	
+    	list.BackwardsTraverse();
+    	list.ForwardsTraverse();
+    }
+}
