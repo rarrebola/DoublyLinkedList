@@ -1,4 +1,4 @@
-package IIS.DoublyLinkedList;
+package iis.doublyLinkedList;
 
 public class DoublyLinkedNode<T> {
 	DoublyLinkedNode<T> prev;

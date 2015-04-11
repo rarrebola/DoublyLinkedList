@@ -1,4 +1,4 @@
-package IIS.DoublyLinkedList;
+package iis.doublyLinkedList;
 
 public class DoublyLinkedList <E>{
 	
@@ -21,7 +21,7 @@ public class DoublyLinkedList <E>{
 		lastNode.next = null;
 	}
 	
-	public void ForwardsTraverse(){
+	public void forwardsTraverse(){
 		DoublyLinkedNode<E> node = firstNode;
 		System.out.print("Forwards: ");
 		
@@ -33,7 +33,7 @@ public class DoublyLinkedList <E>{
 		System.out.println("\n");
 	}
 	
-	public void BackwardsTraverse(){
+	public void backwardsTraverse(){
 		DoublyLinkedNode<E> node = lastNode;
 		System.out.print("Backwards: ");
 		
@@ -45,7 +45,7 @@ public class DoublyLinkedList <E>{
 		System.out.print("\n");
 	}
 	
-	public void InsertAfter (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){
+	public void insertAfter (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){
 		newNode.prev = node;
 		newNode.next = node.next;
 		
@@ -58,7 +58,7 @@ public class DoublyLinkedList <E>{
 		node.next = newNode;
 	}
 	
-	public void InsertBefore (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){
+	public void insertBefore (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){
 		newNode.next = node;
 		newNode.prev = node.prev;
 		
@@ -71,39 +71,39 @@ public class DoublyLinkedList <E>{
 		node.prev = newNode;
 	}
 	
-	public void InsertBeginning (DoublyLinkedNode<E> newNode){
+	public void insertBeginning (DoublyLinkedNode<E> newNode){
 		if(firstNode == null){
 			newNode.next = null;
 			newNode.prev = null;
 			firstNode = newNode;
 			lastNode = newNode;
 		}else{
-			InsertBefore(firstNode, newNode);
+			insertBefore(firstNode, newNode);
 		}
 	}
 	
-	public void InsertEnd (DoublyLinkedNode<E> newNode){
+	public void insertEnd (DoublyLinkedNode<E> newNode){
 		if(lastNode == null){
-			InsertBeginning(newNode);
+			insertBeginning(newNode);
 		}else{
-			InsertAfter(lastNode, newNode);
+			insertAfter(lastNode, newNode);
 		}
 	}
 	
 	public void remove (DoublyLinkedNode<E> node){
 		DoublyLinkedNode<E> n = firstNode;
-		boolean node_is_in_the_list = false;
+		boolean nodeIsInTheList = false;
 		
 		//loop to check if the node is in the list
-		while(n != null && !node_is_in_the_list){
+		while(n != null && !nodeIsInTheList){
 			if(n == node){
-				node_is_in_the_list = true;
+				nodeIsInTheList = true;
 				break;
 			}
 			n = n.next;
 		}
 		
-		if(!node_is_in_the_list){
+		if(!nodeIsInTheList){
 			throw new RuntimeException("ERROR: The node is not in the list.");
 		}else{
 			if (node.prev == null){

@@ -1,39 +1,48 @@
-package IIS.DoublyLinkedList;
+package iis.doublyLinkedList;
 
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-    	DoublyLinkedNode<Integer> n1 = new DoublyLinkedNode<Integer>(3);
-    	DoublyLinkedNode<Integer> n2 = new DoublyLinkedNode<Integer>(4);
+public class App {
+	public static final int V1 =3;
+	public static final int V2 = 4;
+	public static final int V3 = 14;
+	public static final int V4 = 9;
+	public static final int V5 = 13;
+	public static final int V6 = 6;
+	
+	private App(){
+		
+	}
+	
+    public static void main( String[] args ){
+    	DoublyLinkedNode<Integer> n1 = new DoublyLinkedNode<Integer>(V1);
+    	DoublyLinkedNode<Integer> n2 = new DoublyLinkedNode<Integer>(V2);
     	
     	DoublyLinkedList<Integer> list = new DoublyLinkedList<Integer>(n1, n2);
     	
     	System.out.println("\nFirst traverse: \n");
-    	list.ForwardsTraverse();
-    	list.BackwardsTraverse();
+    	list.forwardsTraverse();
+    	list.backwardsTraverse();
     	
-    	DoublyLinkedNode<Integer> new_node_1 = new DoublyLinkedNode<Integer>(5);
-    	list.InsertAfter(n2, new_node_1);
+    	DoublyLinkedNode<Integer> newNode1 = new DoublyLinkedNode<Integer>(V3);
+    	list.insertAfter(n2, newNode1);
     	
-    	DoublyLinkedNode<Integer> new_node_2 = new DoublyLinkedNode<Integer>(6);
-    	list.InsertAfter(new_node_1, new_node_2);
+    	DoublyLinkedNode<Integer> newNode2 = new DoublyLinkedNode<Integer>(V4);
+    	list.insertAfter(newNode1, newNode2);
     	
-    	DoublyLinkedNode<Integer> new_node_3 = new DoublyLinkedNode<Integer>(14);
-    	list.InsertBeginning(new_node_3);
+    	DoublyLinkedNode<Integer> newNode3 = new DoublyLinkedNode<Integer>(V5);
+    	list.insertBeginning(newNode3);
     	
-    	DoublyLinkedNode<Integer> new_node_4 = new DoublyLinkedNode<Integer>(9);
-    	list.InsertEnd(new_node_4);
+    	DoublyLinkedNode<Integer> newNode4 = new DoublyLinkedNode<Integer>(V6);
+    	list.insertEnd(newNode4);
     	
     	System.out.println("\n Second traverse: \n");
-    	list.BackwardsTraverse();
-    	list.ForwardsTraverse();
+    	list.backwardsTraverse();
+    	list.forwardsTraverse();
     	
     	System.out.println("\n Last traverse: \n");
-    	list.remove(new_node_2);
+    	list.remove(newNode2);
     	
-    	list.BackwardsTraverse();
-    	list.ForwardsTraverse();
+    	list.backwardsTraverse();
+    	list.forwardsTraverse();
     }
 }
