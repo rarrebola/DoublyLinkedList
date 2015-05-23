@@ -1,4 +1,4 @@
-package iis.doublyLinkedList;
+package iis.doublylinkedlist;
 
 
 public class App {
@@ -20,8 +20,8 @@ public class App {
     	DoublyLinkedList<Integer> list = new DoublyLinkedList<Integer>(n1, n2);
     	
     	System.out.println("\nFirst traverse: \n");
-    	list.forwardsTraverse();
-    	list.backwardsTraverse();
+    	System.out.println(list.forwardsTraverse());
+    	System.out.println(list.backwardsTraverse());
     	
     	DoublyLinkedNode<Integer> newNode1 = new DoublyLinkedNode<Integer>(V3);
     	list.insertAfter(n2, newNode1);
@@ -36,13 +36,13 @@ public class App {
     	list.insertEnd(newNode4);
     	
     	System.out.println("\n Second traverse: \n");
-    	list.backwardsTraverse();
-    	list.forwardsTraverse();
+    	System.out.println(list.forwardsTraverse());
+    	System.out.println(list.backwardsTraverse());
     	
     	System.out.println("\n Last traverse: \n");
     	list.remove(newNode2);
     	
-    	list.backwardsTraverse();
-    	list.forwardsTraverse();
+    	System.out.println(list.forwardsTraverse());
+    	System.out.println(list.backwardsTraverse());
     }
 }

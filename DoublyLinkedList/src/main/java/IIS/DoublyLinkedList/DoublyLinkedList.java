@@ -1,9 +1,14 @@
-package iis.doublyLinkedList;
+package iis.doublylinkedlist;
 
 public class DoublyLinkedList <E>{
 	
-	DoublyLinkedNode<E> firstNode;
-	DoublyLinkedNode<E> lastNode;
+	private DoublyLinkedNode<E> firstNode;
+	private DoublyLinkedNode<E> lastNode;
+	
+	public DoublyLinkedList(){
+	  firstNode = null;
+	  lastNode = null;
+	}
 	
 	public DoublyLinkedList (DoublyLinkedNode<E> node){
 		node.prev = null;
@@ -21,28 +26,37 @@ public class DoublyLinkedList <E>{
 		lastNode.next = null;
 	}
 	
-	public void forwardsTraverse(){
+	public DoublyLinkedNode<E> getFirstNode(){
+	  return firstNode;
+	}
+	
+	public DoublyLinkedNode<E> getLastNode(){
+	  return lastNode;
+	}
+	
+	public String forwardsTraverse(){
 		DoublyLinkedNode<E> node = firstNode;
 		System.out.print("Forwards: ");
 		
+		String s = "";
 		while(node != null){
-			System.out.print(node.data + " ");
+			s = s + node.data + " ";
 			node = node.next;
 		}
-		
-		System.out.println("\n");
+		return s;
 	}
 	
-	public void backwardsTraverse(){
+	public String backwardsTraverse(){
 		DoublyLinkedNode<E> node = lastNode;
 		System.out.print("Backwards: ");
 		
+		String s = "";
 		while(node != null){
-			System.out.print(node.data + " ");
+			s = s + node.data + " ";
 			node = node.prev;
 		}
 		
-		System.out.print("\n");
+		return s;
 	}
 	
 	public void insertAfter (DoublyLinkedNode<E> node, DoublyLinkedNode<E> newNode){

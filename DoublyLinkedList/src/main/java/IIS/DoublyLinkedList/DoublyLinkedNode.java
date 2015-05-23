@@ -1,9 +1,15 @@
-package iis.doublyLinkedList;
+package iis.doublylinkedlist;
 
 public class DoublyLinkedNode<T> {
 	DoublyLinkedNode<T> prev;
 	DoublyLinkedNode<T> next;
 	T data;
+	
+	public DoublyLinkedNode(){
+	  data = null;
+	  prev = null;
+	  next = null;
+	}
 	
 	public DoublyLinkedNode (T data){
 		prev = null;
