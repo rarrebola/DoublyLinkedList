@@ -1,0 +1,5 @@
+package iis.doublylinkedlist;
+
+public class DoublyLinkedNodeException {
+
+}

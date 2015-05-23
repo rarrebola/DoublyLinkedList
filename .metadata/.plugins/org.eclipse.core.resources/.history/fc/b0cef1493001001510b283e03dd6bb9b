@@ -1,0 +1,9 @@
+package iis.doublylinkedlist;
+
+public class DoublyLinkedNodeException extends RuntimeException {
+  
+  public DoublyLinkedNodeException(String msj){
+    super(msj);
+  }
+
+}
